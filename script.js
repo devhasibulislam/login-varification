@@ -13,6 +13,14 @@ const btnVisibility = () => {
     }
 }
 
+userPassword.addEventListener('keyup', event => { // work on pressing enter
+    // if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
+        loginBtn.click();
+    } else {
+        event.preventDefault();
+    }
+});
 
 loginBtn.addEventListener('click', () => {
     email = EMAIL_VARIFICATION.test(`${userEmail.value}`); // onlyboyrobin@gmail.com
